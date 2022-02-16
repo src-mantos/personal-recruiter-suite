@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "/personal-recruiter-data-service/",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "build - personal-recruiter-data-service",
+			"detail": "npx tsc --build"
+		}
+	]
+}
