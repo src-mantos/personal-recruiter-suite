@@ -1,3 +1,6 @@
 [submodule "personal-recruiter-data-service"]
 	path = personal-recruiter-data-service
 	url = https://github.com/src-mantos/personal-recruiter-data-service.git
+[submodule "personal-recruiter-user-interface"]
+	path = personal-recruiter-user-interface
+	url = https://github.com/src-mantos/personal-recruiter-user-interface
