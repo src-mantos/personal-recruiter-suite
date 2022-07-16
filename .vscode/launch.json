@@ -5,23 +5,49 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "[data-service] Debug (ts-node)",
             "type": "node",
             "request": "launch",
-            "name": "personal-recruiter-data-service test",
-            "cwd": "${workspaceRoot}/personal-recruiter-data-service",
-            "program": "${workspaceRoot}/personal-recruiter-data-service/node_modules/jest/bin/jest.js",
             "args": [
-                "--verbose",
-                "-i",
-                "--no-cache",
-                "--config",
-                "${workspaceRoot}/personal-recruiter-data-service/test/jest.config.ts"
+                "${relativeFile}"
             ],
-            "preLaunchTask": "build - personal-recruiter-data-service",
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "protocol": "inspector",
+            "internalConsoleOptions": "openOnSessionStart",
+            "cwd": "${workspaceFolder}/personal-recruiter-data-service",
+            "program": "${workspaceFolder}/personal-recruiter-data-service/src/debug.ts",
+        },
+        {
+            "name": "[data-service-server] Debug (ts-node)",
+            "type": "node",
+            "request": "launch",
+            "args": [
+                "${relativeFile}"
+            ],
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "protocol": "inspector",
+            "internalConsoleOptions": "openOnSessionStart",
+            "cwd": "${workspaceFolder}/personal-recruiter-data-service",
+            "program": "${workspaceFolder}/personal-recruiter-data-service/src/server.ts",
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "[data-service] Quick Check",
+            "runtimeExecutable": "yarn",
+            "cwd": "${workspaceRoot}/personal-recruiter-data-service",
+            "runtimeArgs": ["run","check"],
             "sourceMaps": true,
             "smartStep": true,
             "internalConsoleOptions": "openOnSessionStart",
-            "outFiles": ["${workspaceRoot}/personal-recruiter-data-service/dist/**/*.js"]
+            "outFiles": ["${workspaceRoot}/personal-recruiter-data-service/dist/**/**/*.js"],
+            "showAsyncStacks": true,
         }
     ]
 }
