@@ -1,10 +1,11 @@
-# Use root/example as user/password credentials
+# Full dev environment running
 version: '3.1'
 
 services:
 
   mongo:
     image: mongo:4.4.6
+    container_name: mongo_mongo_1
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
@@ -14,6 +15,7 @@ services:
 
   mongo-express:
     image: mongo-express
+    container_name: mongo_mongo-express_1
     restart: always
     ports:
       - 8081:8081
@@ -22,9 +24,16 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
       ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
 
-  # data-api:
-  #   build: ../personal-recruiter-data-service
-  #   ports:
-  #      - 3000:3000
-  #   environment:
-  #     CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+  data-api:
+    build: ./personal-recruiter-data-service
+    ports:
+       - 3000:3000
+    environment:
+      CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+
+  post-ui:
+    build: ./personal-recruiter-user-interface
+    ports:
+       - 8080:8080
+    environment:
+      NEXT_PUBLIC_DATA_URL: http://localhost:3000/v1/

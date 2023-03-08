@@ -1,29 +1,21 @@
 # Personal Recruiter Suite
+A consolidated workspace and "runnable" environment for the suite of infrastructure to interact with job post data.
 
-a workspace organization project to house high level project documentation, streamline environmental setup and act as the personal deployment platform through docker.
+### Related Reading
+- [Process Doc's](./docs/process_doc.md)
+- [Developer Info](./docs/dev_info.md)
 
 
+## Getting Started
+Docker & [Docker](https://docs.docker.com/compose/) Compose is required to run, at minimum the database, if not the full suite.
 
-### [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) - cheat sheet
+### Quick Commands
+- Full Suite [\*limited](./docs/dev_info.md#docker-runtime-restriction)
+    - `docker-compose -f devFull.yml up`
+- Data Interface
+    - `docker-compose -f dataOnly.yml up`
 
-```
-$ git submodule add <repo>
-$ git diff --cached --submodule
-```
-
-#### Cloning this repository
-
-```
-** after cloning the repo **
-$ git submodule init
-$ git submodule update
-```
-
-or
-
-```
-$ git clone --recurse-submodules <repo>
-```
-
-# References
-- [docker start container](https://docs.docker.com/engine/reference/commandline/create/#examples)
+### Quick Links
+- [Personal Recurter UI:8080](http://localhost:8080)
+- [Personal Recurter API:3000/v1/docs](http://localhost:3000/v1/docs/)
+- [Mongo Express:8081](http://localhost:8081/)

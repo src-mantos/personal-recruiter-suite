@@ -3,24 +3,25 @@
 ## Software Development Plan
 
 ### Primary Goals
-
-- find more granular opportunities in the market for a specialization (ie. full stack engineer & angular)
-- general salary data broken out by useful demographics
-- facilitate a job search across multiple locations
+- To gather job post data and store it for later review
+- Build a React facade around an organically grown micro-service for user review and revision
+- To gain some kind of useful insight(s) into the current job market
+- To have this be a base around I can start integrating ML
 
 ### Overview
+Here is `v0.5` design "sketch".  The contents are currently incorrect due to functionality that was changed or not implemented, but conceptually still acurate to help understand the functioning of the systems.
+<a href="./Personal Recruiter - planning 0.5.png" style="display:inline-block" target="_blank">
+<img src="./Personal Recruiter - planning 0.5.png" width="50%"/>
+</a>
 
-![Day 0 Planning](./Personal Recruiter - planning 0.5.png)
+### Design Goals:
+1) To create a reasonably modular system for the collection of Job Posting Data and being able to extract useful aggregate data out of it.
+2) To not take on any individual piece of functionality that couldn't be completed in a week iteration
 
-#### Design Goals:
+### Considerations & Assumptions
+- 
 
-To create a reasonably modular system for the collection of Job Posting Data and being able to extract useful aggregate data out of it.  
-
-Defining primary interfaces as service contracts.
-
-
-
-## Technical Agile Task Breakdown
+## Framing Agile Task Breakdown
 
 - *[global]* Setup a consolidated development environment
 - *[data service]* Basic project setup with a test case driver
