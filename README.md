@@ -4,6 +4,7 @@ A consolidated workspace and "runnable" environment for the suite of infrastruct
 ### Related Reading
 - [Process Doc's](./docs/process_doc.md)
 - [Developer Info](./docs/dev_info.md)
+- [End of Life](./docs/eol_doc.md)
 
 
 ## Getting Started

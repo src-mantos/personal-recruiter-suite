@@ -5,7 +5,10 @@
 |Node.js | v16.13.0 or later |
 |Yarn    | v16.13.0 or later |
 |Docker  | 20.10.22 or later |
-
+|        | *mongo:4.4.6* |
+|        | *mongo-express:latest* |
+|        |*mcr.microsoft.com/playwright:v1.18.0-focal*|
+|        | *node:16-alpine* |
 ## Pull the Suite
 [GIT Submodule Reference](https://git-scm.com/book/en/v2/Git-Tools-Submodules). To pull down all submodules in the initial clone.
 ```

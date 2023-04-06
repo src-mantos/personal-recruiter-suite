@@ -5,7 +5,7 @@ services:
 
   mongo:
     image: mongo:4.4.6
-    container_name: mongo_mongo_1
+    container_name: mongo_personal-recruiter-data
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
@@ -15,7 +15,7 @@ services:
 
   mongo-express:
     image: mongo-express
-    container_name: mongo_mongo-express_1
+    container_name: mongo_express_personal-recruiter
     restart: always
     ports:
       - 8081:8081
